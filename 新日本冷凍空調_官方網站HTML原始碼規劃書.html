@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <title>新日本冷凍空調科技股份有限公司 - 官方網站規劃書</title>
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        body {
+            font-family: 'Helvetica Neue', Arial, 'Noto Sans TC', sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background-color: #f4f7f6;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        header {
+            background-color: #0c2340;
+            color: #ffffff;
+            padding: 30px 40px;
+            border-bottom: 5px solid #1d70b8;
+            margin-bottom: 40px;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 26px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        header p {
+            margin: 8px 0 0 0;
+            font-size: 14px;
+            color: #cbd5e1;
+        }
+        .section-block {
+            background: #ffffff;
+            border-radius: 6px;
+            padding: 30px;
+            margin-bottom: 35px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        h2 {
+            font-size: 20px;
+            color: #0c2340;
+            border-left: 5px solid #1d70b8;
+            padding-left: 12px;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+        h3 {
+            font-size: 16px;
+            color: #1d70b8;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 14px;
+            color: #4a5568;
+            text-align: justify;
+            margin-bottom: 15px;
+        }
+        ul, ol {
+            font-size: 14px;
+            color: #4a5568;
+            padding-left: 20px;
+            margin-bottom: 15px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 13px;
+        }
+        th, td {
+            border: 1px solid #e2e8f0;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #f8fafc;
+            color: #0c2340;
+            font-weight: bold;
+        }
+        tr:nth-child(even) {
+            background-color: #fdfdfd;
+        }
+        .highlight-box {
+            background-color: #f0f7ff;
+            border-left: 4px solid #1d70b8;
+            padding: 15px;
+            font-size: 14px;
+            margin: 15px 0;
+        }
+        .footer-info {
+            background-color: #1e293b;
+            color: #ffffff;
+            padding: 20px;
+            font-size: 13px;
+            border-radius: 4px;
+            margin-top: 20px;
+        }
+        .code-box {
+            background-color: #1e1e1e;
+            color: #d4d4d4;
+            padding: 15px;
+            border-radius: 4px;
+            font-family: monospace;
+            font-size: 12px;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>新日本冷凍空調科技股份有限公司 | 官方網站 HTML 實體原始碼與架構規劃</h1>
+        <p>執行長：張元弘 (Rain Chang) | 專屬客製化繁體中文網頁原始碼</p>
+    </header>
+
+    <div class="container">
+
+        <div class="section-block">
+            <h2>💡 自行動手建站步驟引導說明</h2>
+            <p>張總您好，這是為新日本冷凍空調量身打造的單頁面/全功能官網 HTML 原始碼。如果您打算直接動手修改，可以將下方各區塊的原始碼直接複製到您的 WordPress (WP Admin -> 頁面 -> 自訂 HTML 區塊)，或者直接存成 <code>index.html</code> 上傳至 GoDaddy 主機空間。</p>
+            <ul>
+                <li><strong>LOGO 放置處：</strong> 原始碼中均已為您預留 <code>&lt;!-- 公司 LOGO 位置 --&gt;</code> 標籤，您可以將公司的 LOGO 圖片上傳至 WordPress 媒體庫，並將圖片網址填入 <code>src=""</code> 當中。</li>
+                <li><strong>聯絡表單：</strong> 聯絡我們區塊已設定標準 RWD 表單介面，並配置了您的專案直通專線與官方信箱。</li>
+            </ul>
+        </div>
+
+        <div class="section-block">
+            <h2>🌐 全站完整 HTML 網頁原始碼 (包含全套產品與實績素材)</h2>
+            <p>請複製下方黑底框內的全部程式碼，即可直接在瀏覽器或編輯器中渲染出具備日系職人質感的完整網站：</p>
+            
+            <div class="code-box">&lt;!DOCTYPE html&gt;
+&lt;html lang="zh-TW"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;新日本冷凍空調科技股份有限公司 | 專業空調 × 節能永續 × 全台服務&lt;/title&gt;
+    &lt;style&gt;
+        /* 全域樣式設定 */
+        *, *::before, *::after { box-sizing: border-box; }
+        body { font-family: 'PingFang TC', 'Microsoft JhengHei', Arial, sans-serif; margin:0; padding:0; color:#333; background-color:#fafafa; line-height:1.7; }
+        
+        /* 導覽列 */
+        .navbar { background-color:#0c2340; color:#fff; padding:15px 30px; display: block; overflow: hidden; border-bottom: 4px solid #1d70b8; }
+        .nav-logo { float: left; font-size: 20px; font-weight: bold; color:#fff; text-decoration: none; }
+        .nav-menu { float: right; margin: 0; padding: 5px 0; list-style: none; }
+        .nav-menu li { display: inline; margin-left: 20px; }
+        .nav-menu a { color: #cbd5e1; text-decoration: none; font-size: 14px; transition: color 0.3s; }
+        .nav-menu a:hover { color: #fff; }
+
+        /* Banner 區塊 */
+        .hero-banner { background-color: #111e30; color: #fff; padding: 80px 40px; text-align: center; }
+        .hero-banner h1 { font-size: 28px; margin-bottom: 15px; color: #fff; }
+        .hero-banner p { font-size: 16px; color: #cbd5e1; max-width: 800px; margin: 0 auto 25px auto; }
+        .cta-btn { background-color: #1d70b8; color: #fff; padding: 12px 30px; text-decoration: none; font-size: 15px; border-radius: 4px; display: inline-block; font-weight: bold; }
+
+        /* 區塊通用樣式 */
+        .section-container { max-width: 1140px; margin: 0 auto; padding: 50px 20px; background-color: #fff; margin-top: 25px; border-radius: 4px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+        .section-title { font-size: 22px; color: #0c2340; border-left: 5px solid #1d70b8; padding-left: 12px; margin-bottom: 25px; }
+        
+        /* 關於我們 */
+        .profile-table { width: 100%; border-collapse: collapse; margin-top: 15px; }
+        .profile-table th, .profile-table td { padding: 12px; border: 1px solid #e2e8f0; text-align: left; font-size: 14px; }
+        .profile-table th { background-color: #f8fafc; font-weight: bold; width: 25%; color: #0c2340; }
+
+        /* 產品列表樣式 */
+        .product-card { border: 1px solid #e2e8f0; padding: 20px; margin-bottom: 20px; border-radius: 4px; }
+        .product-card h3 { color: #1d70b8; margin-top: 0; font-size: 18px; }
+        
+        /* 工程實績表格 */
+        .project-table { width: 100%; border-collapse: collapse; margin-top: 15px; font-size: 14px; }
+        .project-table th, .project-table td { padding: 10px 12px; border: 1px solid #e2e8f0; text-align: left; }
+        .project-table th { background-color: #0c2340; color: #fff; font-weight: bold; }
+        .project-table tr:nth-child(even) { background-color: #f8fafc; }
+
+        /* 聯絡我們表單 */
+        .form-group { margin-bottom: 15px; }
+        .form-group label { display: block; margin-bottom: 5px; font-size: 14px; font-weight: bold; }
+        .form-control { width: 100%; padding: 10px; border: 1px solid #cbd5e1; border-radius: 4px; font-size: 14px; }
+        .submit-btn { background-color: #0c2340; color: #fff; padding: 10px 25px; border: none; border-radius: 4px; cursor: pointer; font-size: 15px; }
+        
+        /* 頁尾 */
+        footer { background-color: #1e293b; color: #94a3b8; text-align: center; padding: 30px; font-size: 13px; margin-top: 50px; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;!-- 導覽列 --&gt;
+    &lt;nav class="navbar"&gt;
+        &lt;a href="#" class="nav-logo"&gt;
+            &lt;!-- 公司 LOGO 位置 --&gt;
+            新日本冷凍空調科技
+        &lt;/a&gt;
+        &lt;ul class="nav-menu"&gt;
+            &lt;li&gt;&lt;a href="#about"&gt;關於我們&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#products"&gt;自有品牌產品&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#services"&gt;服務項目&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#projects"&gt;工程實績&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#contact"&gt;聯絡我們&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/nav&gt;
+
+    &lt;!-- 首頁 Banner --&gt;
+    &lt;header class="hero-banner"&gt;
+        &lt;h1&gt;會呼吸的隱形防護盾，打造高效、節能、永續的精密環境解決方案&lt;/h1&gt;
+        &lt;p&gt;承襲二十餘年機電與空調底蘊，以日系工程精確度，定義新世代空氣品質與建築節能標準。漢祐集團旗下專業空調技術品牌。&lt;/p&gt;
+        &lt;a href="#contact" class="cta-btn"&gt;立即諮詢專業方案&lt;/a&gt;
+    &lt;/header&gt;
+
+    &lt;!-- 關於我們區塊 --&gt;
+    &lt;section id="about" class="section-container"&gt;
+        &lt;div class="section-title"&gt;關於我們 / 公司簡介&lt;/div&gt;
+        &lt;p&gt;新日本的誕生，源自創辦團隊在空調產業深耕二十餘年、歷經國際頂級品牌歷練的豐富實務經驗。我們整合頂尖技術，以「符合台灣建築條件」為核心，推出高整合性的精密空調與智慧防霾新風設備，期望在穩健經營中，為客戶創造高效能與低耗能的最佳平衡。&lt;/p&gt;
+        
+        &lt;table class="profile-table"&gt;
+            &lt;tr&gt;
+                &lt;th&gt;公司名稱&lt;/th&gt;
+                &lt;td&gt;新日本冷凍空調科技股份有限公司&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;th&gt;所屬母集團&lt;/th&gt;
+                &lt;td&gt;漢祐建築機電整合集團 (資本額：新台幣 2.7 億元)&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;th&gt;專業資質認證&lt;/th&gt;
+                &lt;td&gt;三甲特許資質 (甲級電器承裝業、甲等自來水管承裝商、甲等冷凍空調業)&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;th&gt;主要經營團隊&lt;/th&gt;
+                &lt;td&gt;
+                    董事長：陳育偉 Andy Chen (30年機電無塵室底蘊)&lt;br&gt;
+                    執行長：張元弘 Rain Chang (曾任大金空調、東元機電部長，國家特許永續淨零管理師)&lt;br&gt;
+                    副總經理：楊政耀 Nick (25年半導體光電實務經驗)&lt;br&gt;
+                    工務總監：廖啟伸 Jason (15年大型政府與航空廠機電整合經驗)
+                &lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/table&gt;
+    &lt;/section&gt;
+
+    &lt;!-- 核心自有品牌產品 --&gt;
+    &lt;section id="products" class="section-container"&gt;
+        &lt;div class="section-title"&gt;自有品牌設備與核心技術&lt;/div&gt;
+        
+        &lt;div class="product-card"&gt;
+            &lt;h3&gt;1. 新日本 · 智能防霾新風除濕系統&lt;/h3&gt;
+            &lt;p&gt;專為豪宅別墅、高質感建案量身打造。整合新風導入、空氣循環淨化與強效除濕，採用進口恆風量 EC 風機與低噪壓縮機。&lt;/p&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;strong&gt;高規格全熱交換：&lt;/strong&gt;採用六邊形高分子奈米有機材料熱交換芯，焓回收率達 74.46%，防黴可重覆水洗。&lt;/li&gt;
+                &lt;li&gt;&lt;strong&gt;三重過濾淨化：&lt;/strong&gt;全金屬前置濾網 + 除甲醛 CD 過濾網 + 進口中高效過濾網。&lt;/li&gt;
+                &lt;li&gt;&lt;strong&gt;超薄設計：&lt;/strong&gt;僅 270mm 纖薄機身，輕鬆隱形吊頂安裝。&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+
+        &lt;div class="product-card"&gt;
+            &lt;h3&gt;2. 新日本 SHINNIPPON 蝶型雙閥片逆止風門&lt;/h3&gt;
+            &lt;p&gt;徹底解決現代建築「當層排氣」外牆直通戶外的防備洞口痛點。&lt;/p&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;strong&gt;工研院 1A 認證：&lt;/strong&gt;榮獲最高防護等級認證，近乎零洩漏。&lt;/li&gt;
+                &lt;li&gt;&lt;strong&gt;四重威脅完美阻絕：&lt;/strong&gt;100% 阻擋屋外風嘯噪音、PM2.5 霾害、管道蚊蟲及大樓鄰居抽菸異味虹吸倒灌。&lt;/li&gt;
+                &lt;li&gt;&lt;strong&gt;防火級材質：&lt;/strong&gt;統一採用 ABS PA765 防火級安全材質。&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+
+        &lt;div class="product-card"&gt;
+            &lt;h3&gt;3. 三大數位智慧運維管理平台&lt;/h3&gt;
+            &lt;p&gt;以數位化工具確保極致反應速度與能耗管控：&lt;/p&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;strong&gt;CoolMap®：&lt;/strong&gt;能耗可視化平台，即時監控能耗優化運行。&lt;/li&gt;
+                &lt;li&gt;&lt;strong&gt;EcoTrack®：&lt;/strong&gt;永續管理平台，數據化減碳成效對接 ESG 指標。&lt;/li&gt;
+                &lt;li&gt;&lt;strong&gt;SpeedFix®：&lt;/strong&gt;高效運維平台，全台大聯盟體系 24-48 小時內快速反應。&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+
+    &lt;!-- 服務項目 --&gt;
+    &lt;section id="services" class="section-container"&gt;
+        &lt;div class="section-title"&gt;核心工作與服務項目&lt;/div&gt;
+        &lt;ol&gt;
+            &lt;li&gt;&lt;strong&gt;高階精密空調與特殊環境控制：&lt;/strong&gt;AI 伺服器高負載數據中心機房冷卻、無塵室恆溫恆濕。&lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;中央空調系統規劃與 EPC 工程施工：&lt;/strong&gt;引進先進 CFD 氣流與熱能模擬診斷，提供一站式整合服務。&lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;節能改善與設備升級合約：&lt;/strong&gt;評估老舊系統，協助企業達成年均節電 12-18% 的綠色永續承諾。&lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;全方位空調定期維保與快速故障應對：&lt;/strong&gt;全台據點每日可處理 100+ 維保需求，到場率達 95%+。&lt;/li&gt;
+        &lt;/ol&gt;
+    &lt;/section&gt;
+
+    &lt;!-- 工程實績 --&gt;
+    &lt;section id="projects" class="section-container"&gt;
+        &lt;div class="section-title"&gt;指標性代表工程實績&lt;/div&gt;
+        &lt;table class="project-table"&gt;
+            &lt;thead&gt;
+                &lt;tr&gt;
+                    &lt;th style="width: 40%;"&gt;工程名稱&lt;/th&gt;
+                    &lt;th style="width: 60%;"&gt;工程概要&lt;/th&gt;
+                &lt;/tr&gt;
+            &lt;/thead&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;&lt;td&gt;全台麥當勞 (McDonald's)&lt;/td&gt;&lt;td&gt;設備安裝工程與全台連鎖店空調長期定期維保計畫 (2026-2030)&lt;/td&gt;&lt;/tr&gt;
+                &lt;tr&gt;&lt;td&gt;國賓大建設 南港首席住宅&lt;/td&gt;&lt;td&gt;大型住宅建案中央空調工程與舒濕防風整體系統規劃&lt;/td&gt;&lt;/tr&gt;
+                &lt;tr&gt;&lt;td&gt;日商三井花園飯店 (Mitsui Garden Hotel)&lt;/td&gt;&lt;td&gt;大型高階機電空調系統整合工程&lt;/td&gt;&lt;/tr&gt;
+                &lt;tr&gt;&lt;td&gt;寶島眼鏡全台通路&lt;/td&gt;&lt;td&gt;通路多據點之空調工程、汰換改善與長期維保服務&lt;/td&gt;&lt;/tr&gt;
+                &lt;tr&gt;&lt;td&gt;華南銀行高雄博愛分行&lt;/td&gt;&lt;td&gt;精密空調與辦公空間空調升級改善工程&lt;/td&gt;&lt;/tr&gt;
+                &lt;tr&gt;&lt;td&gt;澤米科技 (石英鏡頭廠)&lt;/td&gt;&lt;td&gt;高規格 Class 1/10 及 Class 1000 頂級潔淨室空調工程&lt;/td&gt;&lt;/tr&gt;
+                &lt;tr&gt;&lt;td&gt;力晶半導體 / 台灣茂矽電子&lt;/td&gt;&lt;td&gt;半導體精密製程機電空調與冷卻水系統整合工程&lt;/td&gt;&lt;/tr&gt;
+                &lt;tr&gt;&lt;td&gt;日商日立化成 / 日商台灣食研&lt;/td&gt;&lt;td&gt;機電空調、特殊製程系統及潔淨室新建工程&lt;/td&gt;&lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/section&gt;
+
+    &lt;!-- 聯絡我們 --&gt;
+    &lt;section id="contact" class="section-container"&gt;
+        &lt;div class="section-title"&gt;聯絡我們 / 專業諮詢&lt;/div&gt;
+        &lt;p&gt;若您有別墅豪宅防霾新風除濕規劃、逆止風門設備採購、或商業/廠辦精密空調工程發包需求，請填寫下表，我們將指派專人於 24 小時內與您聯繫。&lt;/p&gt;
+        
+        &lt;form action="#" method="post" onsubmit="alert('您的資料已送出，專員將盡快與您聯繫！'); return false;"&gt;
+            &lt;div class="form-group"&gt;
+                &lt;label&gt;貴司名稱 / 稱呼 *&lt;/label&gt;
+                &lt;input type="text" class="form-control" required&gt;
+            &lt;/div&gt;
+            &lt;div class="form-group"&gt;
+                &lt;label&gt;聯絡電話 *&lt;/label&gt;
+                &lt;input type="tel" class="form-control" required&gt;
+            &lt;/div&gt;
+            &lt;div class="form-group"&gt;
+                &lt;label&gt;服務需求項目 *&lt;/label&gt;
+                &lt;select class="form-control"&gt;
+                    &lt;option&gt;別墅豪宅防霾新風除濕規劃&lt;/option&gt;
+                    &lt;option&gt;自有品牌設備 (逆止風門) 批量採購&lt;/option&gt;
+                    &lt;option&gt;商用 / 廠辦精密空調 EPC 統包工程&lt;/option&gt;
+                    &lt;option&gt;節能改善、數位平台導入與長期維保簽約&lt;/option&gt;
+                &lt;/select&gt;
+            &lt;/div&gt;
+            &lt;div class="form-group"&gt;
+                &lt;label&gt;需求說明 / 專案地點&lt;/label&gt;
+                &lt;textarea class="form-control" rows="4"&gt;&lt;/textarea&gt;
+            &lt;/div&gt;
+            &lt;button type="submit" class="submit-btn"&gt;送出諮詢表單&lt;/button&gt;
+        &lt;/form&gt;
+    &lt;/section&gt;
+
+    &lt;!-- 頁尾資訊 --&gt;
+    <footer>
+        <p>&copy; 2026 新日本冷凍空調科技股份有限公司. All Rights Reserved.</p>
+        <p>桃園總公司（漢祐集團總部）：桃園市龜山區大崗里大湖路 21 巷 19 號 | 台北聯絡處：台北市中山區南京西路10號10樓</p>
+        <p>專案直通專線：+886 926 189 997 / 02-2100-2001 | 官方信箱：shinnippon@shinnippon.com.tw</p>
+    </footer>
+
+&lt;/body&gt;
+&lt;/html&gt;</div>
+        </div>
+
+    </div>
+
+</body>
+</html>
